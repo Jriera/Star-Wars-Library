@@ -1,0 +1,103 @@
+$gray:#282727;
+$stripe-color:#2B2A2A;
+$font-color:#999999;
+$accent-red:#9E4F60;
+$accent-gold:#FFE300;
+$accent-blue:#5EA2C4;
+:host{
+    color: $font-color;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    
+}
+.starship{
+
+   &-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+    &-pill{
+        width: 250px;
+        margin: 15px;
+        background-color: $gray;
+        border-radius: 15px;
+        background: repeating-linear-gradient(
+            135deg,
+            $gray,
+            $gray 3px,
+            $stripe-color 3px,
+            $stripe-color 6px
+        );
+        box-shadow: 4px 3px 15px -6px $accent-red ;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    &-pill:hover{
+        cursor: pointer;
+        transform: translate(-2px,-5px);
+    }
+
+    &-image{
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        max-height: 250px;
+        margin: 0 auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom: 2px solid $accent-red;
+    }
+    
+
+    &-titles{
+        
+        
+        padding: 8px;
+        text-align: center;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        
+        
+        z-index: 2;
+        &-name{
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-variant: small-caps;
+            color: $accent-red;
+            
+        }
+
+        &-model{
+            font-size: 0.9rem;
+            font-style:italic;
+            color: $font-color;
+            font-weight: 300;
+        }
+        p{
+            margin: 0;
+            font-weight: 700;
+            z-index: 2;
+            
+        }
+        &-decal{
+            position: absolute;
+            bottom: -115px;
+            right: -25px;
+            width:80%;
+            
+            opacity: 0.05;
+
+
+        }
+    }
+}
+

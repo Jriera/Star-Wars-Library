@@ -1,0 +1,12 @@
+<div class="starship-wrapper" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class='starship-pill' *ngFor="let starship of starships"  (click)='starshipDetail(starship)'>
+        <img class="starship-image" src={{starship.url}} (error)='getStarshipComplements(starship)' alt="">
+        <div class="starship-titles">
+            <p class="starship-titles-name">{{starship.name}}</p>
+            <p class="starship-titles-model">{{starship.model}}</p>
+            <img class="starship-titles-decal" src="../../../assets/images/decal.png" alt="">
+        </div>
+        
+        <br>
+    </div>
+</div>

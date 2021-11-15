@@ -1,0 +1,81 @@
+$gray:#282727;
+$stripe-color:#2B2A2A;
+$font-color:#999999;
+$accent-red:#5EA2C4;
+$accent-gold:#FFE300;
+:host{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    background-image: url(../../../assets/images/navigation_stars-c6452e016c73.jpeg);
+
+    &-social-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width:150px;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &-logo{
+        img{
+            width: 200px;
+            height: 90px;
+        }
+    }
+
+    &-utilities{
+        min-width: 150px;
+    }
+
+    &-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        border-top: 0.5px solid $font-color;
+        border-bottom: 0.5px solid $font-color;
+        color: $font-color;
+
+        &-links{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            padding: 0 20px;
+            color: $font-color;
+            background-color: black;
+            margin: 0;
+            li{
+                list-style: none;
+                padding: 14px 32px;
+                border-right: 0.5px solid $font-color;
+                cursor: pointer;
+                &:first-child{
+                    border-left: 0.5px solid $font-color;
+                }
+                span{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $font-color;
+                    font-family:'Lato';
+                }
+               
+            }
+
+            
+        }
+    }
+}
