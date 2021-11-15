@@ -10,6 +10,7 @@ import { StarshipDetailsComponent } from './components/starship-details/starship
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NavComponentComponent } from './components/nav-component/nav-component.component';
 import { HomeComponent } from './components/home/home.component';
+import { ImageErrorHandlerDirective } from './image-error-handler.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './components/home/home.component';
     StarshipsComponent,
     StarshipDetailsComponent,
     NavComponentComponent,
-    HomeComponent
+    HomeComponent,
+    ImageErrorHandlerDirective
   ],
   imports: [
     BrowserModule,
