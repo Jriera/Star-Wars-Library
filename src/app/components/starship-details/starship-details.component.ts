@@ -38,12 +38,14 @@ export class StarshipDetailsComponent implements OnInit {
   extraDetail:Subscription=new Subscription();
   descrriptionSub:Subscription = new Subscription();
   description:string = "";
+  default:string=''
 
   constructor(private activatedRoute:ActivatedRoute,private http:HttpService) { }
 
   ngOnInit(): void {
     
     this.getStarship();
+    this.getStarshipComplements(this.starship.id);
     this.getDescription(this.starship.id);
     
   }
@@ -65,10 +67,16 @@ getStarshipDetails(id:string){
 }
 
 getStarshipComplements(id:string){
-  this.extraDetail = this.http.getStarshipComplements(id).subscribe((res)=>{
-    this.starship.url = res.image;
-    console.log('this should work:'+res.image);
-  })
+  try {
+    this.extraDetail = this.http.getStarshipComplements(id).subscribe((res)=>{
+      this.default = res.image;
+      this.starship.url = this.default;
+      
+    })
+  } catch (error) {
+    console.log(error);
+  }
+  
   
 }
 
@@ -80,10 +88,5 @@ getDescription(id:string){
 
 }
 
-/* ngDoCheck(){
-  if(this.starship.id){
-    this.getStarshipComplements(this.starship.id);
-  }
 
-} */
 }
