@@ -19,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     ImageErrorHandlerDirective,
     LoginModalComponent,
-    SignupComponent,
+    SignupComponent
    
   ],
   imports: [
@@ -40,7 +41,9 @@ import { SignupComponent } from './signup/signup.component';
     HttpClientModule,
     InfiniteScrollModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
     ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
