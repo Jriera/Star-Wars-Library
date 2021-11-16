@@ -3,6 +3,7 @@ $stripe-color:#2B2A2A;
 $font-color:#999999;
 $accent-red:#5EA2C4;
 $accent-gold:#FFE300;
+$f-fam:'Lato', sans-serif;
 :host{
     position: fixed;
     top: 0;
@@ -38,6 +39,27 @@ $accent-gold:#FFE300;
 
     &-utilities{
         min-width: 150px;
+        margin-right:20px; 
+        color: $font-color;
+        display: flex;
+        flex-direction: row;
+        p{
+            margin: 0 8px;
+            font-family:$f-fam;
+        }
+    
+    }
+    p:nth-child(odd){
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    p:nth-child(even){
+        font-weight: 300;
+        color: #373737;
     }
 
     &-content{
