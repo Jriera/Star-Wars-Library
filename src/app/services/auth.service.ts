@@ -8,7 +8,10 @@ export class AuthService {
 
   isLoggedIn:boolean=false;
   constructor() { }
-
+  autoLogout(){
+    this.isLoggedIn=false;
+    localStorage.setItem('isLoggedIn', this.isLoggedIn.toString());
+  }
   createUser(email: string, password: string, name: string,lname:string) {
     // Here you can create a new user
     const user:User = {
@@ -20,6 +23,10 @@ export class AuthService {
     this.isLoggedIn=true;
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('isLoggedIn',  this.isLoggedIn.toString());
+    setTimeout(() => {
+      this.autoLogout();
+      console.log('autoLogout');
+    } , 10000);
   }
 
   authenticate(email: string, password: string) {
