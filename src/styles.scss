@@ -3,3 +3,15 @@ html{
    
     background-image: url(assets/images/stars_background.jpeg);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+mat-dialog-container,.mat-dialog-container{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+    
+}
