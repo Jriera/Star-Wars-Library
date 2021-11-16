@@ -6,6 +6,7 @@ import { User } from '../models/user.model';
 })
 export class AuthService {
 
+  isLoggedIn:boolean=false;
   constructor() { }
 
   createUser(email: string, password: string, name: string,lname:string) {
@@ -16,13 +17,17 @@ export class AuthService {
       password: password,
       email: email
     }
+    this.isLoggedIn=true;
     localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('isLoggedIn',  this.isLoggedIn.toString());
   }
 
   authenticate(email: string, password: string) {
     
     const user:User=JSON.parse(localStorage.getItem('user')||'{}');
-    user.email===email && user.password===password ? true : false;
+    user.email===email && user.password===password ? this.isLoggedIn=true : this.isLoggedIn=false;
+    localStorage.setItem('isLoggedIn', this.isLoggedIn.toString());
+    return this.isLoggedIn;
     
 
   }
