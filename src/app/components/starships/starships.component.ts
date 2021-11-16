@@ -94,7 +94,7 @@ export class StarshipsComponent implements OnInit {
     getStarshipComplements(starship:Starship){
       this.extraDetail = this.http.getStarshipComplements(starship.id).subscribe((res)=>{
         starship.url = res.image;
-        console.log('this should work:'+res.image);
+        
       })
       
     }
