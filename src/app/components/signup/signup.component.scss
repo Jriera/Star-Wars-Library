@@ -3,7 +3,7 @@ $stripe-color:#2B2A2A;
 $font-color:#999999;
 $accent-red:#5EA2C4;
 $accent-yellow:#EDD700;
-$light-gray:#F5F5F5;
+$light-gray:#f5f5f5;
 $dark-gray:#181818;
 $button-color:#484848;
 $f-fam:'Lato', sans-serif;
@@ -41,7 +41,7 @@ $f-fam:'Lato', sans-serif;
         border-bottom: 1px solid $gray;
         font-size: 14px;
         font-weight: 200;
-        color: $light-gray;
+        color: $gray;
     }
 
     button{
@@ -52,7 +52,7 @@ $f-fam:'Lato', sans-serif;
         background-color: $button-color;
         font-size: 14px;
         font-weight: 500;
-        color: $light-gray;
+        color:$light-gray;
         cursor: pointer;
         padding: 0;
     }
@@ -67,7 +67,7 @@ $f-fam:'Lato', sans-serif;
     width: 460px;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content:flex-end;
     margin-right: 0;
     margin-left: 40px;
 

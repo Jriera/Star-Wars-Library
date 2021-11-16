@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
-import { SignupComponent } from 'src/app/signup/signup.component';
+import { SignupComponent } from 'src/app/components/signup/signup.component';
 @Component({
   selector: 'app-nav-component',
   templateUrl: './nav-component.component.html',
