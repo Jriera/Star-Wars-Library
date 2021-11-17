@@ -1,0 +1,105 @@
+$gray:#282727;
+$stripe-color:#2B2A2A;
+$font-color:#999999;
+$accent-red:#9E4F60;
+$accent-gold:#FFE300;
+$accent-blue:#5EA2C4;
+:host{
+    color: $font-color;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    
+}
+.character{
+
+   &-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+    &-pill{
+        width: 168px;
+        height: 265px;
+        margin: 15px;
+        background-color: $gray;
+        border-radius: 5px;
+        background: repeating-linear-gradient(
+            135deg,
+            $gray,
+            $gray 3px,
+            $stripe-color 3px,
+            $stripe-color 6px
+        );
+        box-shadow: 4px 3px 15px -6px $accent-red ;
+        position: relative;
+        overflow: hidden;
+        
+    }
+
+    &-pill:hover{
+        cursor: pointer;
+        transform: translate(-2px,-5px);
+    }
+
+    &-image{
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+        max-height: 200px;
+        margin: 0 auto;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 2px solid $accent-red;
+    }
+    
+
+    &-titles{
+        
+        
+        padding: 8px;
+        text-align: center;
+        min-height: 100px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+        
+        z-index: 2;
+        &-name{
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform:uppercase ;
+            color: $font-color;
+            
+        }
+
+        &-model{
+            font-size: 0.9rem;
+            font-style:italic;
+            color: $font-color;
+            font-weight: 300;
+        }
+        p{
+            margin: 0;
+            font-weight: 700;
+            z-index: 2;
+            
+        }
+        &-decal{
+            position: absolute;
+            bottom: -115px;
+            right: -25px;
+            width:80%;
+            
+            opacity: 0.05;
+
+
+        }
+    }
+}
+
