@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { Starship, StarshipComplements } from '../models/starship.model';
 import { APIResponse } from '../models/api-response.model';
 import { Character } from '../models/character.model';
-//la API response es un Tuple per tant ens accepta responses del tipus que necessitem en cada peticio
+import { Film} from '../models/films.model';
+
 
 @Injectable({
   providedIn: 'root',
@@ -43,5 +44,12 @@ export class HttpService {
     `https://swapi.dev/api/people/${id}`
   );
   return character;
+  }
+
+  getFilms(id: string): Observable<Film> {
+    const film = this.http.get<Film>(
+      `https://swapi.dev/api/films/${id}`
+    );
+    return film;
   }
 }
