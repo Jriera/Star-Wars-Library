@@ -25,6 +25,7 @@ import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { PilotsComponent } from './components/pilots/pilots.component';
 import { FilmsComponent } from './components/films/films.component';
+import { ActorsComponent } from './components/actors/actors.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { FilmsComponent } from './components/films/films.component';
     SignupComponent,
     LoginComponent,
     PilotsComponent,
-    FilmsComponent
+    FilmsComponent,
+    ActorsComponent
    
   ],
   imports: [
