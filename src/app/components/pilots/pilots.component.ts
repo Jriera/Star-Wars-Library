@@ -46,12 +46,12 @@ export class PilotsComponent implements OnInit, OnChanges {
   getId(url: string) {
     //no existeix id unica per cada pilot, per tant, hem de obtenir la id a partir de la propietat url del pilot
     switch (url.length) {
-      case 31:
+      case 32:
         const id = url.slice(url.indexOf('[0-9]') - 2,url.indexOf('[0-9]')
         );
         return id;
 
-      case 30:
+      case 31:
         const id2 = url.slice(url.indexOf('[0-9]') - 1,url.indexOf('[0-9]')
         );
 
