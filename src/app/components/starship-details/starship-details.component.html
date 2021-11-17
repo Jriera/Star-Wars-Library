@@ -1,6 +1,6 @@
 <div class="detail">
     <div class="detail-image-wrapper">
-        <img  default={{default}}  class="detail-image image-not-loaded" src={{starship.url}}  alt="">
+        <img default={{default}} class="detail-image image-not-loaded" src={{starship.url}} alt="">
     </div>
     <div class="detail-content-wrapper">
         <div class="detail-content">
@@ -8,17 +8,30 @@
             <p>{{description}}</p>
             <p class="detail-description">Model: {{starship.model}}</p>
             <p class="detail-description"> Manufacturer: {{starship.manufacturer}}</p>
-            <p class="detail-description">Cost: {{starship.cost_in_credits}}</p>
             
         </div>
     </div>
-    
-
 </div>
+<div class="specs">
+    <h2 class="specs-title">Specs</h2>
+    <div class="specs-content">
+        <p class="detail-description"><span>Cost:</span> {{starship.cost_in_credits}} credits</p>
+        <p class="specs-description"><span>Length:</span> {{starship.length}} meters</p>
+        <p class="specs-description"><span>Max atmosphering speed:</span> {{starship.max_atmosphering_speed}} parsecs/sec</p>
+        <p class="specs-description"><span>Crew:</span> {{starship.crew}} people</p>
+        <p class="specs-description"><span>Passengers:</span> {{starship.passengers}} people</p>
+    </div>
+    <div class="specs-content">
+        <p class="specs-description"><span>Cargo capacity:</span> {{starship.cargo_capacity}}</p>
+        <p class="specs-description"><span>Consumables:</span> {{starship.consumables}}</p>
+        <p class="specs-description"><span>Hyperdrive rating:</span> {{starship.hyperdrive_rating}}</p>
+        <p class="specs-description"><span>MGLT:</span> {{starship.MGLT}}</p>
+        <p class="specs-description"><span>Starship class:</span> {{starship.starship_class}}</p>
+    </div>
+</div>
+        
+
+
+
 <app-films [starship]='starship'></app-films>
-<app-pilots [starship]='starship' *ngIf="starship.pilots.length" ></app-pilots>
-
-
-
-
-
+<app-pilots [starship]='starship' *ngIf="starship.pilots.length"></app-pilots>
