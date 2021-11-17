@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Starship, StarshipComplements } from '../models/starship.model';
 import { APIResponse } from '../models/api-response.model';
+import { Character } from '../models/character.model';
 //la API response es un Tuple per tant ens accepta responses del tipus que necessitem en cada peticio
 
 @Injectable({
@@ -36,5 +37,11 @@ export class HttpService {
     );
     return extraDetails;
   }
-  
+
+  getCharacter(id: string): Observable<Character> {
+  const character = this.http.get<Character>(
+    `https://swapi.dev/api/people/${id}`
+  );
+  return character;
+  }
 }
