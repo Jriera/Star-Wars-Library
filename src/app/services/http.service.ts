@@ -46,6 +46,18 @@ export class HttpService {
   return character;
   }
 
+  getCharacters(page?:string): Observable<APIResponse<Character>> {
+    if(page){
+      let params = new HttpParams().set('page' ,page);
+      const characterResponse = this.http.get<APIResponse<Character>>('https://swapi.dev/api/people/',{params:params});
+      return characterResponse;
+    }
+    const characterResponse = this.http.get<APIResponse<Character>>(
+'https://swapi.dev/api/people/'
+    );
+    return characterResponse;
+  }
+
   getFilms(id: string): Observable<Film> {
     const film = this.http.get<Film>(
       `https://swapi.dev/api/films/${id}`
