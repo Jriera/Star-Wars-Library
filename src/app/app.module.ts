@@ -23,6 +23,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './components/login/login.component';
+import { PilotsComponent } from './components/pilots/pilots.component';
+import { FilmsComponent } from './components/films/films.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { LoginComponent } from './components/login/login.component';
     ImageErrorHandlerDirective,
     LoginModalComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    PilotsComponent,
+    FilmsComponent
    
   ],
   imports: [
