@@ -15,7 +15,8 @@
     
 
 </div>
-<app-pilots [starship]='starship'></app-pilots>
+<app-films [starship]='starship'></app-films>
+<app-pilots [starship]='starship' *ngIf="starship.pilots.length" ></app-pilots>
 
 
 
