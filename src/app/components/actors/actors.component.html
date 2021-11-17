@@ -1,0 +1,11 @@
+<div class="character-wrapper" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class='character-pill' *ngFor="let character of characters"  (click)='characterDetail(character)'>
+        <img class="character-image" src={{character.image}}  alt="">
+        <div class="character-titles">
+            <p class="character-titles-name">{{character.name}}</p>
+        </div>
+        <br>
+    </div>
+</div>
+            
+        
