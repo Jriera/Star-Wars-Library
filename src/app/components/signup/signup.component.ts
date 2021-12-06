@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./signup.component.scss']
 })
 
+//prova de pull request
 
 export class SignupComponent implements OnInit {
 
