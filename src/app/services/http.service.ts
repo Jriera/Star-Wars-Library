@@ -16,18 +16,18 @@ export class HttpService {
   getStarships(page?:string): Observable<APIResponse<Starship>> {
     if(page){
       let params = new HttpParams().set('page' ,page);
-      const starshipResponse = this.http.get<APIResponse<Starship>>('https://swapi.dev/api/starships/',{params:params});
+      const starshipResponse = this.http.get<APIResponse<Starship>>('https://swapi.py4e.com/api/starships/',{params:params});
       return starshipResponse;
     }
     const starshipResponse = this.http.get<APIResponse<Starship>>(
-'https://swapi.dev/api/starships/'
+'https://swapi.py4e.com/api/starships/'
     );
     return starshipResponse;
   }
 
   getStarshipDetails(id: string): Observable<Starship> {
     const starship = this.http.get<Starship>(
-      `https://swapi.dev/api/starships/${id}`
+      `https://swapi.py4e.com/api/starships/${id}`
     );
     return starship;
   }
@@ -41,14 +41,14 @@ export class HttpService {
 
   getCharacter(id: string): Observable<Character> {
   const character = this.http.get<Character>(
-    `https://swapi.dev/api/people/${id}`
+    `https://swapi.py4e.com/api/people/${id}`
   );
   return character;
   }
 
   getFilms(id: string): Observable<Film> {
     const film = this.http.get<Film>(
-      `https://swapi.dev/api/films/${id}`
+      `https://swapi.py4e.com/api/films/${id}`
     );
     return film;
   }
