@@ -42,14 +42,14 @@ export class StarshipsComponent implements OnInit {
   getStarshipId(starship: Starship) {
     //no existeix id unica per cada nau, per tant, hem de passar el id de la nau per la url
     switch (starship.url.length) {
-      case 35:
+      case 40:
         starship.id = starship.url.slice(
           starship.url.indexOf('[0-9]') - 2,
           starship.url.indexOf('[0-9]')
         );
         return starship.id;
 
-      case 34:
+      case 39:
         starship.id = starship.url.slice(
           starship.url.indexOf('[0-9]') - 1,
           starship.url.indexOf('[0-9]')
