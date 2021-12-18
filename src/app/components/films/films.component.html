@@ -1,0 +1,16 @@
+<h2 class="header" *ngIf="films.length">
+    appearances in films
+</h2>
+<div class="films">
+    <ng-container *ngFor="let film of films">
+        <img src={{film.image}} alt="">
+    </ng-container>
+</div>
+
+
+
+
+
+
+
+

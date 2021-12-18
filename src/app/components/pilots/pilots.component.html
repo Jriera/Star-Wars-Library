@@ -1,0 +1,19 @@
+<h2 class="header" *ngIf="pilots.length">
+    starship known pilots
+</h2>
+<div class="pilots">
+    <ng-container *ngFor="let pilot of pilots">
+        <div>
+
+            <div class="pilot-pill">
+
+                <img src={{pilot.image}} alt="">
+                <div class="pilot-details">
+                    {{pilot.name}}
+                </div>
+            </div>
+
+        </div>
+    </ng-container>
+
+</div>

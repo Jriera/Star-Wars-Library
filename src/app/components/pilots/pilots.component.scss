@@ -1,0 +1,71 @@
+$gray:#282727;
+$stripe-color:#2B2A2A;
+$font-color:#DDD;
+$accent-red:#9E4F60;
+$accent-gold:#FFE300;
+$accent-blue:#5EA2C4;
+$accent-gray:#3b3b3b;
+$f-fam:'Lato', sans-serif;
+
+:host{
+    padding: 6.5%;
+    padding-top: 0;
+    background: linear-gradient(
+        90deg, 
+        rgba(21,21,21,0.3702074579831933) 0%, 
+        rgba(21,21,21,1) 19%, 
+        rgba(21,21,21,1) 79%, 
+        rgba(21,21,21,0.09289653361344541) 100%);
+}
+.header{
+    border-top:2px solid $accent-gray;
+    border-bottom: 2px solid $accent-gray;
+    padding:5px;
+    text-transform: uppercase;
+    font-family: $f-fam;
+    color: $font-color;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.pilots{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.pilot-pill{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+        margin: 15px;
+        background-color: $gray;
+        border-radius: 15px;
+        background: repeating-linear-gradient(
+            135deg,
+            $gray,
+            $gray 3px,
+            $stripe-color 3px,
+            $stripe-color 6px
+        );
+        position: relative;
+        overflow: hidden;
+
+        img{
+            max-height:140px;
+            
+        }
+        
+        
+        .pilot-details{
+            padding: 10px;
+            height: 60px;
+            text-align: center;
+            font-family: $f-fam;
+            font-weight: 700;
+            color: $accent-red;
+            font-size: 18px;
+        }
+}
+

@@ -1,0 +1,43 @@
+$gray:#282727;
+$stripe-color:#2B2A2A;
+$font-color:#DDD;
+$accent-red:#9E4F60;
+$accent-gold:#FFE300;
+$accent-blue:#5EA2C4;
+$accent-gray:#3b3b3b;
+$f-fam:'Lato', sans-serif;
+
+:host{
+    padding: 0 6.5%;
+    background: linear-gradient(
+        90deg, 
+        rgba(21,21,21,0.3702074579831933) 0%, 
+        rgba(21,21,21,1) 19%, 
+        rgba(21,21,21,1) 79%, 
+        rgba(21,21,21,0.09289653361344541) 100%);
+}
+
+.header{
+    border-top:2px solid $accent-gray;
+    border-bottom: 2px solid $accent-gray;
+    padding:5px;
+    text-transform: uppercase;
+    font-family: $f-fam;
+    color: $font-color;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.films{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+
+    img{
+        max-width: 20%;
+        margin: 0 12px;
+       
+    }
+    
+}

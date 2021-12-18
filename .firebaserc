@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sw-library": {
+      "hosting": {
+        "Star-Wars-Library": [
+          "sw-library"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sw-library"
+  }
+}

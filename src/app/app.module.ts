@@ -22,6 +22,9 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './components/login/login.component';
+import { PilotsComponent } from './components/pilots/pilots.component';
+import { FilmsComponent } from './components/films/films.component';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { AuthGuard } from './auth.guard';
     HomeComponent,
     ImageErrorHandlerDirective,
     LoginModalComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent,
+    PilotsComponent,
+    FilmsComponent
    
   ],
   imports: [

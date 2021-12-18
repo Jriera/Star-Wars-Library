@@ -23,10 +23,7 @@ export class AuthService {
     this.isLoggedIn=true;
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('isLoggedIn',  this.isLoggedIn.toString());
-    setTimeout(() => {
-      this.autoLogout();
-      console.log('autoLogout');
-    } , 10000);
+    
   }
 
   authenticate(email: string, password: string) {

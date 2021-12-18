@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="container">
+        <img src="../../../assets/images/SW-logo.png" alt="" class="container-logo">
+        <h2 class="container-title">sign in</h2>
+        <div class="container-form">
+            <form
+           [formGroup]="userLogin" class="form-signin">
+                <input type="email" id="inputEmail"  formControlName='emailForm' placeholder=" Username or Email address" >
+                <input type="password" id="inputPassword" formControlName='passwordForm'  placeholder=" Password">
+                <button class="signin-button" type="submit" (click)="login()">Sign in</button>
+                <div class="signin-help">
+                    <a>Need help signing in?</a>
+                </div>
+            </form>
+            <button class="account-button" (click)="openSingupModal()">Create an Account</button>
+        </div>
+    </div>
+</div>

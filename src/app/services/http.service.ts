@@ -3,7 +3,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Starship, StarshipComplements } from '../models/starship.model';
 import { APIResponse } from '../models/api-response.model';
-//la API response es un Tuple per tant ens accepta responses del tipus que necessitem en cada peticio
+import { Character } from '../models/character.model';
+import { Film} from '../models/films.model';
+
 
 @Injectable({
   providedIn: 'root',
@@ -14,18 +16,18 @@ export class HttpService {
   getStarships(page?:string): Observable<APIResponse<Starship>> {
     if(page){
       let params = new HttpParams().set('page' ,page);
-      const starshipResponse = this.http.get<APIResponse<Starship>>('https://swapi.dev/api/starships/',{params:params});
+      const starshipResponse = this.http.get<APIResponse<Starship>>('https://swapi.py4e.com/api/starships/',{params:params});
       return starshipResponse;
     }
     const starshipResponse = this.http.get<APIResponse<Starship>>(
-'https://swapi.dev/api/starships/'
+'https://swapi.py4e.com/api/starships/'
     );
     return starshipResponse;
   }
 
   getStarshipDetails(id: string): Observable<Starship> {
     const starship = this.http.get<Starship>(
-      `https://swapi.dev/api/starships/${id}`
+      `https://swapi.py4e.com/api/starships/${id}`
     );
     return starship;
   }
@@ -36,5 +38,18 @@ export class HttpService {
     );
     return extraDetails;
   }
-  
+
+  getCharacter(id: string): Observable<Character> {
+  const character = this.http.get<Character>(
+    `https://swapi.py4e.com/api/people/${id}`
+  );
+  return character;
+  }
+
+  getFilms(id: string): Observable<Film> {
+    const film = this.http.get<Film>(
+      `https://swapi.py4e.com/api/films/${id}`
+    );
+    return film;
+  }
 }
